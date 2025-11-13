@@ -1,0 +1,6 @@
+pyTelegramBotAPI
+requests
+python-dotenv
+solana
+solders
+asyncio
