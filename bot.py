@@ -45,7 +45,7 @@ def cross_check(ca):
         return None
 
 def alpha_mentions(ca):
-    return 2  # Replace later
+    return 2
 
 async def get_price(ca):
     try:
@@ -74,7 +74,7 @@ async def sell(ca, pct):
     price = await get_price(ca)
     profit = price / pos['entry']
     bot.send_message(chat_id, f"SELLING {pct*100:.0f}% of {ca[:6]}...{ca[-4:]}\nPrice: ${price:.6f} | PnL: {(profit-1)*100:+.2f}%")
-    if pct == 1.0:
+    if pct >= 1.0:
         del positions[ca]
 
 async def manage_position(ca, pos):
