@@ -3,4 +3,3 @@ requests
 python-dotenv
 solana
 solders
-asyncio
